@@ -1,8 +1,62 @@
+.wrapper{
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  box-sizing: border-box;
+
+}
+.wrapper .sec-text{
+  height: 47px;
+  color: #11999E;
+  overflow: hidden;
+}
+.first-text{
+  position: relative;
+  top: 40px;
+  color: #11999E;
+  
+}
+.sec-text li{
+  position: relative;
+  top: 0;
+  list-style: none;
+  /* padding: 0 10px; */
+  /* text-shadow: 0 0 10px; */
+  animation: slide 12s steps(4) infinite;
+  font-weight: bold;
+}
+@keyframes slide{
+  100%{
+    top: -195px;
+  }
+}
+/* .sec-text li span{
+  position: relative;
+} */
+.sec-text li span::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 400px;
+  height: 47px;
+  background-color: #E4F9F5;
+  border-left: 2px solid #11999E;
+  animation: typing 1.5s steps(9) infinite alternate;
+  
+}
+@keyframes typing {
+  100%{
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}
+
 body{
   color: #40514E;
   margin: 0;
   text-align: center;
   font-family: "Merriweather", serif;
+  
 }
 
 h1{
@@ -12,6 +66,13 @@ h1{
   color:#66BFBF;
 }
 h2{
+  font-size:2.5rem;
+  font-family: "Montserrat", sans-serif;
+  color:#66BFBF;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+.wrapper{
   font-size:2.5rem;
   font-family: "Montserrat", sans-serif;
   color:#66BFBF;
@@ -30,17 +91,29 @@ hr{
   border: dotted Brown 6px;
   border-bottom: none;
   width: 4%;
-  margin: 100px auto;
+  margin: 120px auto;
 }
 a{
   color: #11999E;
   margin:30px 20px;
 }
 
+.naukri{
+  
+  width: 65px;
+  right: 385px;
+  
+}
+.naukri:hover{
+  opacity: 0.7;
+}
+
 .top-container{
   background-color: #E4F9F5;
   padding-top: 100px;
   position: relative;
+  box-sizing: border-box;
+  
 }
 
 .middle-container{
@@ -59,11 +132,16 @@ a{
   text-decoration: underline;
 }
 .intro{
-  width: 30%;
+  width: 50%;
   margin: auto;
+  padding-top: 100px;
+  padding-left: 30%;
 }
 
-
+.hello{
+  padding-left: 61%;
+  position: absolute;
+}
 .top-cloud{
   position:absolute;
   right:0%;
@@ -78,9 +156,10 @@ a{
   width: 25%;
 }
 .myphoto{
-  height:20%;
-  width: 20%;
-
+  left: 150px;
+  width: 300px;
+  position: absolute;
+  
 }
 .footer-link{
   color:#11999E;
@@ -137,7 +216,7 @@ a{
 .fa{
   padding: 20px;
   font-size: 20px;
-  width: 20px;
+  width: 18px;
   text-align: center;
   text-decoration: none;
   border-radius: 50%;
@@ -148,6 +227,14 @@ a{
 }
 .fa-twitter {
   background: #55ACEE;
+  color: white;
+}
+.fa-facebook {
+  background: #55ACEE;
+  color: white;
+}
+.fa-github {
+  background: black;
   color: white;
 }
 .fa-instagram {
